@@ -17,7 +17,7 @@
 // let enterPrise = parseFloat(prompt('Введіть ціну'));
 // let newPrises = prises.filter((val, i, arr) =>
 //    (val < enterPrise))
-// document.write(newPrises)dcdscds  
+// document.write(newPrises)
 
 
 //-----------------------------------------------------
