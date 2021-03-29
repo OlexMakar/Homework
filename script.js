@@ -106,3 +106,25 @@
 // let prises = [1200, 2300, 1800, 3200, 5300, 1000]
 // let newPrises = prises.filter((val, i, arr) => val < 2000)
 // document.write(newPrises)
+
+//Задача 12. Розробити функцію, яка би для довільної кількості переданих символів визначала, кількість букв «а».
+// let text = prompt('Введіть набір символів')
+// let count = 0
+// document.write(text)
+
+// function findA(someText) {
+//    someArrText = someText.split('')
+//    someArrText.forEach((val, i, arr) => {
+//       if (val == 'a') {
+//          count++
+//       }
+//       return count
+//    })
+// }
+// findA(text)
+// document.write(`<br>${count}`)
+
+
+
+
+
