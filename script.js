@@ -1,12 +1,12 @@
 // //Задача 1. Дано масив цілих чисел. Кожне від’ємне число замінити на 0.
 
-// let numbers = [25, -6, 39, -10, 12]
-// numbers.forEach((val, i, arr) => {
-//    if (arr[i] < 0) return arr[i] = 0
-//    else
-//       return arr[i];
-// })
-// document.write(numbers);
+let numbers = [25, -6, 39, -10, 12]
+numbers.forEach((val, i, arr) => {
+   if (arr[i] < 0) return arr[i] = 0
+   else
+      return arr[i];
+})
+document.write(numbers);
 
 //-----------------------------------------------------
 
@@ -123,6 +123,9 @@
 // }
 // findA(text)
 // document.write(`<br>${count}`)
+
+//Задача 13. Розробити функцію, яка би для довільної кількості чисел знаходила добуток чисел.
+
 
 
 
