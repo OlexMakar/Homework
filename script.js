@@ -125,16 +125,27 @@
 // document.write(`<br>${count}`)
 
 //Задача 13. Розробити функцію, яка би для довільної кількості чисел знаходила добуток чисел.
-let massiv = []
+// let massiv = []
+// while (true) {
+
+//    let value = prompt("Введіть число");
+//    if (value === "" || value === null || !isFinite(value)) break;
+//    massiv.push(+value);
+// }
+
+// let product = massiv.reduce((prevValue, val, i, arr) => prevValue * val)
+// alert(product)
+
+//Задача 9. Розробити функцію, яка би для довільної кількості чисел знаходила максимальне.
+let numbers = []
 while (true) {
-
-   let value = prompt("Введіть число");
+   let value = prompt('Enter value');
    if (value === "" || value === null || !isFinite(value)) break;
-   massiv.push(+value);
+   numbers.push(+value);
 }
-
-let product = massiv.reduce((prevValue, val, i, arr) => prevValue * val)
-alert(product)
+let sorted = numbers.sort((a, b) => a - b)
+let max = numbers[numbers.length - 1]
+alert(max)
 
 
 
