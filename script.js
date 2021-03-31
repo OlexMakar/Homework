@@ -136,16 +136,16 @@
 // let product = massiv.reduce((prevValue, val, i, arr) => prevValue * val)
 // alert(product)
 
-//Задача 9. Розробити функцію, яка би для довільної кількості чисел знаходила максимальне.
-let numbers = []
-while (true) {
-   let value = prompt('Enter value');
-   if (value === "" || value === null || !isFinite(value)) break;
-   numbers.push(+value);
-}
-let sorted = numbers.sort((a, b) => a - b)
-let max = numbers[numbers.length - 1]
-alert(max)
+//Задача 14. Розробити функцію, яка би для довільної кількості чисел знаходила максимальне.
+// let numbers = []
+// while (true) {
+//    let value = prompt('Enter value');
+//    if (value === "" || value === null || !isFinite(value)) break;
+//    numbers.push(+value);
+// }
+// let sorted = numbers.sort((a, b) => a - b)
+// let max = numbers[numbers.length - 1]
+// alert(max)
 
 
 
