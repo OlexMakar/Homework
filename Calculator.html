@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+
+   <style>
+      .wrapper {
+         width: 400px;
+         height: 500px;
+         background-color: darkgrey;
+         text-align: center;
+         border-radius: 15px;
+         border: 4px solid black;
+      }
+
+      .display {
+         width: 85%;
+         height: 70px;
+         font-size: 40px;
+         background-color: azure;
+         border-radius: 8px;
+      }
+
+      .btn-row {
+         margin: 10px;
+      }
+
+      .button {
+         width: 84px;
+         height: 72px;
+         font-size: 40px;
+         border-radius: 6px;
+         transition-duration: 0.2s;
+         background-color: dimgray;
+      }
+
+      #zero {
+         width: 170px;
+      }
+
+      #calculate.button:hover {
+         background-color: orange;
+      }
+
+      #calculate {
+         background-color: burlywood;
+      }
+
+      .button:hover {
+         background-color: skyblue;
+      }
+
+      #clean {
+         background-color: rosybrown;
+      }
+
+      #clean.button:hover {
+         background-color: salmon;
+      }
+   </style>
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="screen">
+         <input type="text" class="display" readonly />
+      </div>
+      <div class="keyboard">
+         <div class="btn-row">
+            <button class="button" id="clean" onclick="clean()">С</button>
+            <button class="button" onclick="back()">←</button>
+            <button class="button" onclick="insertItem('/')">/</button>
+            <button class="button" onclick="insertItem('*')">х</button>
+         </div>
+         <div class="btn-row">
+            <button class="button" onclick="insertItem('7')">7</button>
+            <button class="button" onclick="insertItem('8')">8</button>
+            <button class="button" onclick="insertItem('9')">9</button>
+            <button class="button" onclick="insertItem('-')">-</button>
+         </div>
+         <div class="btn-row">
+            <button class="button" onclick="insertItem('4')">4</button>
+            <button class="button" onclick="insertItem('5')">5</button>
+            <button class="button" onclick="insertItem('6')">6</button>
+            <button class="button" onclick="insertItem('+')">+</button>
+         </div>
+         <div class="btn-row">
+            <button class="button" onclick="insertItem('1')">1</button>
+            <button class="button" onclick="insertItem('2')">2</button>
+            <button class="button" onclick="insertItem('3')">3</button>
+            <button class="button" onclick="insertItem('%')">%</button>
+         </div>
+         <div class="btn-row">
+            <button class="button" id="zero" onclick="insertItem('0')">0</button>
+            <button class="button" onclick="insertItem('.')">.</button>
+            <button class="button" id="calculate" onclick="res()">=</button>
+         </div>
+      </div>
+
+   </div>
+   <script>
+      function insertItem(item) {
+         document.querySelector('.display').value = document.querySelector('.display').value + item
+      }
+      function clean() {
+         document.querySelector('.display').value = ""
+      }
+      function back() {
+         val = document.querySelector('.display').value
+         document.querySelector('.display').value = val.substring(0, val.length - 1);
+      }
+      function res() {
+         if (eval(document.querySelector('.display').value) != 'undefined')
+            document.querySelector('.display').value = eval(document.querySelector('.display').value)
+      }
+
+   </script>
+
+
+
+
+</body>
+
+</html>
