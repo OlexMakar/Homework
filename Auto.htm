@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobiles</title>
+    <script>
+        class Car {
+            constructor(name, tankSize, numberOfAvailableLiters, numberOfSeats, numberOfPassengers) {
+                this.name = name  //Марка авто
+                this.tankSize = tankSize  //Розмір баку
+                this.numberOfAvailableLiters = numberOfAvailableLiters  //Кількість наявних літрів
+                this.numberOfSeats = numberOfSeats //Кількість місць
+                this.numberOfPassengers = numberOfPassengers  //Кількість пасажирів
+            }
+
+            //Заправка на вказану кількість літрів
+            refueling(amount) {
+               if (amount<=(this.tankSize-this.numberOfAvailableLiters)) {
+                   this.numberOfAvailableLiters+=amount 
+                   return(`Бак поповнено на ${amount} літрів, на даний момент в баку ${this.numberOfAvailableLiters} літрів пального`)                  
+               } 
+               else return false
+            }
+
+            //Виведення кількості пасажирів
+            displayPassengerNumber() {
+                return (`В автомобілі ${this.numberOfPassengers} пасажирів`)
+            }
+
+            //Додавання пасажирів
+            addPassengers(amount) {
+                if (amount<=(this.numberOfSeats-this.numberOfPassengers)) {
+                this.numberOfPassengers+=amount
+                return (`Додалось ${amount} пасажирів, всього ${this.numberOfPassengers} пасажирів`)
+            }
+                else return false
+            }
+
+            //Висадка пасажирів
+            unloadingPassengers(amount) {
+                if (amount<=this.numberOfPassengers) {
+                this.numberOfPassengers -=amount
+                return (`Вийшли ${amount} пасажирів, залишилось ${this.numberOfPassengers} пасажирів`)
+                }
+                else return false
+            }
+
+        }
+        //------------------------
+        let car1 = new Car ("Fiat", 50, 15, 5, 2);
+        console.log(car1);
+        document.write(car1.refueling(35)+'<br>');        
+        document.write(car1.displayPassengerNumber()+'<br>');        
+        document.write(car1.addPassengers(2)+'<br>');        
+        document.write(car1.unloadingPassengers(2)+'<br>');    
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
