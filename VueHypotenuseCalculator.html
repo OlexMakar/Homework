@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hypotenuse Calculator</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+   <div id="app">
+      <label>
+         Cathetus 1:
+         <input type="text" v-model="cathetus1" />
+         <br>
+      </label>
+      <label>
+         Cathetus 2:
+         <input type="text" v-model="cathetus2" />
+         <br>
+      </label>
+      <label>
+         Hypotenuse:
+         <input type="text" :value="hypotenuse" />
+      </label>
+
+   </div>
+
+   <script>
+      var app = new Vue({
+         el: '#app',
+         data: {
+            cathetus1: 5,
+            cathetus2: 10,
+         },
+         computed: {
+            hypotenuse: function () {
+               let c = Math.sqrt(Math.pow(this.cathetus1, 2) + Math.pow(this.cathetus2, 2))
+               return c
+            },
+         },
+      })
+   </script>
+
+</body>
+
+</html>
